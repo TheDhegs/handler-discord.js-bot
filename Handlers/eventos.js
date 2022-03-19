@@ -4,6 +4,6 @@ module.exports = (client) => {
         const eventName = file.split('.').shift();
         const event = require(`../Eventos/${file}`);
         client.on(eventName, event.bind(null, client));
-        delete require.cache[require.resolve(`../eventos/${file}`)]
+        delete require.cache[require.resolve(`../Eventos/${file}`)]
     }
 }
